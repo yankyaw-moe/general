@@ -25,7 +25,7 @@ app.post("/upload", upload.single("file"), (req, res) => {
     .on("error", (err) => res.status(500).json({ error: err.message }));
 });
 
-// json to csv file
+// json to csv file route
 app.get("/download", (req, res) => {
   const sampleData = [
     { name: "John Doe", age: 30, city: "New York" },
